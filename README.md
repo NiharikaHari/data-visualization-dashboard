@@ -162,11 +162,13 @@ This tab visualizes aggregated data with user-specified fields.
 
 - Based on the chart type, the user can select plot data from dropdowns - `Select X-Axis`, `Select Y-Axis`, `Stack/Group By` , `Select Category` and `Select Values`.
 - The dropdown values are dynamically retrieved based on the chart type and available fields in the selected dataset.
+- The dropdowns may show only numeric or non-numeric data based on the chart type.
 
 #### Filter By
 
 - The user may filter the rendered chart based on any field-value pair from the selected dataset.
 - This can be done by selecting values from `Filter By` and `Select Filter Value` dropdowns.
+- Filtering is only supported for categorical(non-numeric) data
 
 ## Built With
 
