@@ -141,32 +141,32 @@ This tab visualizes aggregated data with user-specified fields.
 
 #### Select Chart Type
 
-This dropdown is for the user to select the chart type.
+- This dropdown is for the user to select the chart type.
 
-Below are the available chart types:
+- Below are the available chart types:
+	- Bar Chart
+	- Grouped Bar Chart
+	- Stacked Bar Chart
+	- Histogram
+	- Pie Chart
+	- Line Chart
 
-1. Bar Chart
-2. Grouped Bar Chart
-3. Stacked Bar Chart
-4. Histogram
-5. Pie Chart
-6. Line Chart
-
-Click on the `Select Chart Type` dropdown to select any one.
-Based on the selected chart type, the rest of the input dropdowns will be rendered.
+- Click on the `Select Chart Type` dropdown to select any one.
+- Based on the selected chart type, the rest of the input dropdowns will be rendered.
 
 #### Select Aggregated Data
 
-This dropdown will list the available aggregated data files (as viewed in the previous tab). Select the desired dataset from `Select Aggregated Data` dropdown
+- This dropdown will list the available aggregated data files (as viewed in the previous tab). Select the desired dataset from `Select Aggregated Data` dropdown
 
 #### Select Plot Data
 
-Based on the chart type, the user can select plot data from dropdowns - `Select X-Axis`, `Select Y-Axis`, `Stack/Group By` , `Select Category` and `Select Values`.
-The dropdown values are dynamically retrieved based on the chart type and available fields in the selected dataset.
+- Based on the chart type, the user can select plot data from dropdowns - `Select X-Axis`, `Select Y-Axis`, `Stack/Group By` , `Select Category` and `Select Values`.
+- The dropdown values are dynamically retrieved based on the chart type and available fields in the selected dataset.
 
 #### Filter By
 
-The user may filter the rendered chart based on any field-value pair from the selected dataset. This can be done by selecting values from `Filter By` and `Select Filter Value` dropdowns.
+- The user may filter the rendered chart based on any field-value pair from the selected dataset.
+- This can be done by selecting values from `Filter By` and `Select Filter Value` dropdowns.
 
 ## Built With
 
