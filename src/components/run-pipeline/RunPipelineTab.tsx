@@ -122,11 +122,9 @@ const RunPipelineTab = () => {
     dispatch({ type: 'SET_STATUS', payload: 'loading' });
 
     try {
-      // Execute the pipeline and update the status upon success
       await runPipeline(state.formData);
       dispatch({ type: 'SET_STATUS', payload: 'success' });
     } catch (error) {
-      // Log error and update the status to "error"
       console.error('Error submitting form:', error);
       dispatch({ type: 'SET_STATUS', payload: 'error' });
     }
@@ -167,7 +165,6 @@ const RunPipelineTab = () => {
               name="demographic_file"
               className="text-input"
               placeholder="Block_4_Demographic particulars of household members_sample.tsv"
-              value={state.formData.demographic_file}
               onChange={handleInputChange}
             />
           </label>
@@ -181,7 +178,6 @@ const RunPipelineTab = () => {
               name="expenditure_file"
               className="text-input"
               placeholder="Block_8_Household consumer expenditure_sample.tsv"
-              value={state.formData.expenditure_file}
               onChange={handleInputChange}
             />
           </label>
