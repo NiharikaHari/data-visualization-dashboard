@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchAggregatedList, fetchFileData } from '@/lib/apiUtils';
 import FileList from '@/components/view-aggregated-data/FileList';
 import FileDataTable from '@/components/view-aggregated-data/FileDataTable';
+import Modal from '../run-pipeline/Modal';
 
 /**
  * Component for managing and displaying aggregated data files.
@@ -76,6 +77,14 @@ const AggregatedTab = () => {
           <div className="load-bg">
             <div className="loader loader-style"></div>
           </div>
+        )}
+
+        {status === 'error' && (
+          <Modal
+            title={'Error'}
+            message={'An error occured while retrieving the data.'}
+            onClose={() => setStatus('idle')}
+          ></Modal>
         )}
 
         {/* Reload Button */}

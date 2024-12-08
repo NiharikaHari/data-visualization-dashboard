@@ -4,6 +4,7 @@ import Chart from '@/components/visualize-data/Chart';
 import { DataRow, PlotDataType, OptionsType } from '@/lib/types';
 import { getNumericColumns, getUniqueFieldValues } from '@/lib/dataUtils';
 import { fetchAggregatedList, fetchFileData } from '@/lib/apiUtils';
+import Modal from '../run-pipeline/Modal';
 
 /**
  * Component for the "Visualize" tab in the dashboard.
@@ -13,9 +14,13 @@ import { fetchAggregatedList, fetchFileData } from '@/lib/apiUtils';
  * @returns {JSX.Element} The rendered "Visualize" tab with dropdowns for configuration and a chart visualization.
  */
 
+type Status = 'idle' | 'loading' | 'success' | 'error';
+
 const VisualizeTab = () => {
   // State to store the loaded data from files
   const [fileData, setFileData] = useState<DataRow[]>([]);
+
+  const [status, setStatus] = useState<Status>('idle');
 
   // State to store the current plot configuration (chart type, axes, filters, etc.)
   const [plotData, setPlotData] = useState<PlotDataType>({
@@ -95,6 +100,7 @@ const VisualizeTab = () => {
       setDropdownOptions({ ...dropdownOptions, aggData: dataList.slice(1) });
     } catch (error) {
       console.error('Error retrieving data:', error);
+      setStatus('error');
     }
   };
 
@@ -232,6 +238,15 @@ const VisualizeTab = () => {
         {/* Render additional dropdowns based on selected chart type */}
         {renderDropdowns()}
       </div>
+
+      {status === 'error' && (
+        <Modal
+          title={'Error'}
+          message={'An error occured while retrieving the data.'}
+          onClose={() => setStatus('idle')}
+        ></Modal>
+      )}
+
       {/* Render chart visualization */}
       <div className="flex justify-center h-4/5 pt-10">
         <Chart plotData={plotData} fileData={fileData}></Chart>
