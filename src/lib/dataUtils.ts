@@ -1,5 +1,11 @@
-import { DataRow, PlotDataType } from './types';
+import { DataRow, PlotDataType } from '@/lib/types';
 
+/**
+ * Function to get the numeric columns from a dataset.
+ *
+ * @param data - The dataset to extract numeric columns from.
+ * @returns An array of column names that contain only numeric values.
+ */
 export const getNumericColumns = (data: DataRow[]): string[] => {
   if (data && data.length > 0) {
     const headers = Object.keys(data[0]);
@@ -13,6 +19,13 @@ export const getNumericColumns = (data: DataRow[]): string[] => {
   return [];
 };
 
+/**
+ * Function to get the unique values of a specified field from the dataset.
+ *
+ * @param data - The dataset to extract the unique field values from.
+ * @param fieldName - The name of the field to extract unique values for.
+ * @returns An array of unique values for the specified field.
+ */
 export const getUniqueFieldValues = (data: DataRow[], fieldName: string) => {
   return [
     ...new Set(
@@ -21,6 +34,13 @@ export const getUniqueFieldValues = (data: DataRow[], fieldName: string) => {
   ];
 };
 
+/**
+ * Function to filter the dataset based on a specified condition.
+ *
+ * @param plotData - The plot configuration containing the filter condition.
+ * @param fileData - The dataset to filter.
+ * @param setFilteredData - The function to set the filtered data.
+ */
 export const filterData = (
   plotData: PlotDataType,
   fileData: DataRow[],
@@ -36,7 +56,13 @@ export const filterData = (
   }
 };
 
-// Process data to group by x-axis
+/**
+ * Function to group the data by the x-axis for a bar chart.
+ *
+ * @param filteredData - The filtered dataset to group.
+ * @param plotData - The plot configuration containing the x-axis and y-axis field names.
+ * @returns An object where each key is an x-axis value, and the value is an object containing the total and count of y-axis values.
+ */
 export const groupDataBar = (
   filteredData: DataRow[],
   plotData: PlotDataType
@@ -54,9 +80,17 @@ export const groupDataBar = (
 
     return acc;
   }, {} as Record<string, { total: number; count: number }>);
+
   return groupedData;
 };
 
+/**
+ * Function to group the data by both x-axis and a stack group for a stacked bar chart.
+ *
+ * @param filteredData - The filtered dataset to group.
+ * @param plotData - The plot configuration containing the x-axis, y-axis, and stack group field names.
+ * @returns An object where each key is a stack group, and the value is an object where each x-axis value has a total and count of y-axis values.
+ */
 export const groupDataBarGrouped = (
   filteredData: DataRow[],
   plotData: PlotDataType
@@ -78,10 +112,17 @@ export const groupDataBarGrouped = (
 
     return acc;
   }, {} as Record<string, Record<string, { total: number; count: number }>>);
+
   return groupedData;
 };
 
-// Map grouped data to the required format and calculate averages
+/**
+ * Function to aggregate data and calculate averages for each x-axis value.
+ *
+ * @param data - The grouped data containing the total and count for each x-axis value.
+ * @param plotData - The plot configuration containing the x-axis and y-axis field names.
+ * @returns An array of objects with x-axis, y-axis average, and label for each group.
+ */
 export const aggregateDataAverage = (
   data: Record<
     string,
@@ -106,6 +147,13 @@ export const aggregateDataAverage = (
     });
 };
 
+/**
+ * Function to aggregate data for each group and calculate averages.
+ *
+ * @param data - The grouped data containing the total and count for each group and x-axis value.
+ * @param plotData - The plot configuration containing the x-axis and y-axis field names.
+ * @returns An array of objects, where each object represents a group and contains the aggregated data for each x-axis value.
+ */
 export const aggregateDataAverageGroup = (
   data: Record<
     string,
@@ -131,7 +179,13 @@ export const aggregateDataAverageGroup = (
   }));
 };
 
-// Utility function to split long labels into multiple lines for better readability
+/**
+ * Utility function to split long labels into multiple lines for better readability.
+ *
+ * @param label - The label to be split.
+ * @param maxLength - The maximum length of a label line.
+ * @returns A string with the label split into multiple lines.
+ */
 export const splitLabel = (label: string, maxLength: number): string => {
   if (!label) return label;
 

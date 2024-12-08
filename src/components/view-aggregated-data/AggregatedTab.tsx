@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchAggregatedList, fetchFileData } from '@/lib/apiUtils';
 import FileList from '@/components/view-aggregated-data/FileList';
 import FileDataTable from '@/components/view-aggregated-data/FileDataTable';
-import Modal from '../run-pipeline/Modal';
+import Modal from '@/components/run-pipeline/Modal';
 
 /**
  * Component for managing and displaying aggregated data files.

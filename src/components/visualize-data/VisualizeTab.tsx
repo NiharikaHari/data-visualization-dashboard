@@ -4,7 +4,7 @@ import Chart from '@/components/visualize-data/Chart';
 import { DataRow, PlotDataType, OptionsType } from '@/lib/types';
 import { getNumericColumns, getUniqueFieldValues } from '@/lib/dataUtils';
 import { fetchAggregatedList, fetchFileData } from '@/lib/apiUtils';
-import Modal from '../run-pipeline/Modal';
+import Modal from '@/components/run-pipeline/Modal';
 
 /**
  * Component for the "Visualize" tab in the dashboard.
