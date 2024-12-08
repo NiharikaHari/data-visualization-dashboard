@@ -15,35 +15,35 @@ Here's a brief overview of the key files and directories:
 │   ├── assets/
 │   │   └── react.svg
 │   ├── components/
-│   │   ├── run-pipeline/     		      # Feature: Running pipelines
-│   │   │   ├── Modal.tsx				        # Component for modal overlay
-│   │   │   ├── RadioInput.tsx			    # Component for radio input
-│   │   │   ├── RunPipelineTab.tsx		  # Component for 'Run Pipeline' tab
-│   │   │   └── TextArea.tsx			      # Component for text area input
-│   │   ├── view-aggregated-data/	      # Feature: View aggregated data
-│   │   │   ├── AggregatedTab.tsx		    # Component for 'View Aggregated Data' tab
-│   │   │   ├── FileDataTable.tsx		    # Component for data table
-│   │   │   └── FileList.tsx			      # Component for list of files
-│   │   ├── visualize-data/    		      # Feature: Data visualization
-│   │   │   ├── VisualizeTab.tsx		    # Component for 'Visualize Data' tab
-│   │   │   ├── Dropdown.tsx			      # Component for dropdowns
-│   │   │   ├── Chart.tsx				        # Component for chart area
-│   │   │   └── charts/					        # Components for rendering the respective charts
+│   │   ├── run-pipeline/               # Feature: Running pipelines
+│   │   │   ├── Modal.tsx               # Component for modal overlay
+│   │   │   ├── RadioInput.tsx          # Component for radio input
+│   │   │   ├── RunPipelineTab.tsx      # Component for 'Run Pipeline' tab
+│   │   │   └── TextArea.tsx            # Component for text area input
+│   │   ├── view-aggregated-data/       # Feature: View aggregated data
+│   │   │   ├── AggregatedTab.tsx       # Component for 'View Aggregated Data' tab
+│   │   │   ├── FileDataTable.tsx       # Component for data table
+│   │   │   └── FileList.tsx            # Component for list of files
+│   │   ├── visualize-data/             # Feature: Data visualization
+│   │   │   ├── VisualizeTab.tsx        # Component for 'Visualize Data' tab
+│   │   │   ├── Dropdown.tsx            # Component for dropdowns
+│   │   │   ├── Chart.tsx               # Component for chart area
+│   │   │   └── charts/                 # Components for rendering the respective charts
 │   │   │       ├── BarChart.tsx
 │   │   │       ├── GroupedBarChart.tsx
 │   │   │       ├── Histogram.tsx
 │   │   │       ├── LineChart.tsx
 │   │   │       ├── PieChart.tsx
 │   │   │       └── StackedBarChart.tsx
-│   │   └── Tabs.tsx				            # Tabs to navigate between different sections of the dashboard
+│   │   └── Tabs.tsx                    # Tabs to navigate between different sections of the dashboard
 │   ├── lib/
-│   │   ├── apiUtils.ts				          # Utilities for API integration
-│   │   ├── dataUtils.ts			          # Utilities for data processing
-│   │   └── types.ts				            # Typescript types for data
-│   ├── App.tsx         	  		        # Entry point component
-│   ├── index.css					              # Global styles
-│   └── main.tsx          			        # React entry point
-├── vite.config.ts				              # Vite configuration settings
+│   │   ├── apiUtils.ts                 # Utilities for API integration
+│   │   ├── dataUtils.ts                # Utilities for data processing
+│   │   └── types.ts                    # Typescript types for data
+│   ├── App.tsx                         # Entry point component
+│   ├── index.css                       # Global styles
+│   └── main.tsx                        # React entry point
+├── vite.config.ts                      # Vite configuration settings
 
 ```
 
