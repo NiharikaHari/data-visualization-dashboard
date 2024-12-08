@@ -15,35 +15,35 @@ Here's a brief overview of the key files and directories:
 │   ├── assets/
 │   │   └── react.svg
 │   ├── components/
-│   │   ├── run-pipeline/     		      # Feature: Running pipelines
-│   │   │   ├── Modal.tsx				        # Component for modal overlay
-│   │   │   ├── RadioInput.tsx			    # Component for radio input
-│   │   │   ├── RunPipelineTab.tsx		  # Component for 'Run Pipeline' tab
-│   │   │   └── TextArea.tsx			      # Component for text area input
-│   │   ├── view-aggregated-data/	      # Feature: View aggregated data
-│   │   │   ├── AggregatedTab.tsx		    # Component for 'View Aggregated Data' tab
-│   │   │   ├── FileDataTable.tsx		    # Component for data table
-│   │   │   └── FileList.tsx			      # Component for list of files
-│   │   ├── visualize-data/    		      # Feature: Data visualization
-│   │   │   ├── VisualizeTab.tsx		    # Component for 'Visualize Data' tab
-│   │   │   ├── Dropdown.tsx			      # Component for dropdowns
-│   │   │   ├── Chart.tsx				        # Component for chart area
-│   │   │   └── charts/					        # Components for rendering the respective charts
+│   │   ├── run-pipeline/               # Feature: Running pipelines
+│   │   │   ├── Modal.tsx               # Component for modal overlay
+│   │   │   ├── RadioInput.tsx          # Component for radio input
+│   │   │   ├── RunPipelineTab.tsx      # Component for 'Run Pipeline' tab
+│   │   │   └── TextArea.tsx            # Component for text area input
+│   │   ├── view-aggregated-data/       # Feature: View aggregated data
+│   │   │   ├── AggregatedTab.tsx       # Component for 'View Aggregated Data' tab
+│   │   │   ├── FileDataTable.tsx       # Component for data table
+│   │   │   └── FileList.tsx            # Component for list of files
+│   │   ├── visualize-data/             # Feature: Data visualization
+│   │   │   ├── VisualizeTab.tsx        # Component for 'Visualize Data' tab
+│   │   │   ├── Dropdown.tsx            # Component for dropdowns
+│   │   │   ├── Chart.tsx               # Component for chart area
+│   │   │   └── charts/                 # Components for rendering the respective charts
 │   │   │       ├── BarChart.tsx
 │   │   │       ├── GroupedBarChart.tsx
 │   │   │       ├── Histogram.tsx
 │   │   │       ├── LineChart.tsx
 │   │   │       ├── PieChart.tsx
 │   │   │       └── StackedBarChart.tsx
-│   │   └── Tabs.tsx				            # Tabs to navigate between different sections of the dashboard
+│   │   └── Tabs.tsx                    # Tabs to navigate between different sections of the dashboard
 │   ├── lib/
-│   │   ├── apiUtils.ts				          # Utilities for API integration
-│   │   ├── dataUtils.ts			          # Utilities for data processing
-│   │   └── types.ts				            # Typescript types for data
-│   ├── App.tsx         	  		        # Entry point component
-│   ├── index.css					              # Global styles
-│   └── main.tsx          			        # React entry point
-├── vite.config.ts				              # Vite configuration settings
+│   │   ├── apiUtils.ts                 # Utilities for API integration
+│   │   ├── dataUtils.ts                # Utilities for data processing
+│   │   └── types.ts                    # Typescript types for data
+│   ├── App.tsx                         # Entry point component
+│   ├── index.css                       # Global styles
+│   └── main.tsx                        # React entry point
+├── vite.config.ts                      # Vite configuration settings
 
 ```
 
@@ -141,32 +141,32 @@ This tab visualizes aggregated data with user-specified fields.
 
 #### Select Chart Type
 
-This dropdown is for the user to select the chart type.
+- This dropdown is for the user to select the chart type.
 
-Below are the available chart types:
+- Below are the available chart types:
+	- Bar Chart
+	- Grouped Bar Chart
+	- Stacked Bar Chart
+	- Histogram
+	- Pie Chart
+	- Line Chart
 
-1. Bar Chart
-2. Grouped Bar Chart
-3. Stacked Bar Chart
-4. Histogram
-5. Pie Chart
-6. Line Chart
-
-Click on the `Select Chart Type` dropdown to select any one.
-Based on the selected chart type, the rest of the input dropdowns will be rendered.
+- Click on the `Select Chart Type` dropdown to select any one.
+- Based on the selected chart type, the rest of the input dropdowns will be rendered.
 
 #### Select Aggregated Data
 
-This dropdown will list the available aggregated data files (as viewed in the previous tab). Select the desired dataset from `Select Aggregated Data` dropdown
+- This dropdown will list the available aggregated data files (as viewed in the previous tab). Select the desired dataset from `Select Aggregated Data` dropdown
 
 #### Select Plot Data
 
-Based on the chart type, the user can select plot data from dropdowns - `Select X-Axis`, `Select Y-Axis`, `Stack/Group By` , `Select Category` and `Select Values`.
-The dropdown values are dynamically retrieved based on the chart type and available fields in the selected dataset.
+- Based on the chart type, the user can select plot data from dropdowns - `Select X-Axis`, `Select Y-Axis`, `Stack/Group By` , `Select Category` and `Select Values`.
+- The dropdown values are dynamically retrieved based on the chart type and available fields in the selected dataset.
 
 #### Filter By
 
-The user may filter the rendered chart based on any field-value pair from the selected dataset. This can be done by selecting values from `Filter By` and `Select Filter Value` dropdowns.
+- The user may filter the rendered chart based on any field-value pair from the selected dataset.
+- This can be done by selecting values from `Filter By` and `Select Filter Value` dropdowns.
 
 ## Built With
 
